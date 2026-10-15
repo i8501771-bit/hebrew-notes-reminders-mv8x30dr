@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    android:layoutDirection="rtl">
+
+    <!-- Top App Bar Header -->
+    <LinearLayout
+        android:id="@+id/header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:elevation="3dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/app_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#1B5E20" />
+
+                <!-- Dual Date Subtitle: Gregorian + Hebrew Date -->
+                <TextView
+                    android:id="@+id/tv_dual_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#558B2F"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_notes_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:background="@drawable/bg_hebrew_date"
+                android:textColor="#2E7D32"
+                android:textStyle="bold"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Search Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_search"
+            android:layout_marginTop="12dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_search"
+                android:contentDescription="@null" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="@string/search_placeholder"
+                android:textSize="14sp"
+                android:textColor="#212121"
+                android:textColorHint="#9E9E9E"
+                android:layout_marginStart="8dp"
+                android:singleLine="true"
+                android:imeOptions="actionSearch" />
+        </LinearLayout>
+
+        <!-- Category Horizontal Filter Tabs -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/category_tabs_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical" />
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <!-- Notes List View -->
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header_container"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/notes_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp" />
+    </ScrollView>
+
+    <!-- Empty State View -->
+    <LinearLayout
+        android:id="@+id/layout_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_launcher"
+            android:alpha="0.8"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/empty_notes_title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#37474F"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/empty_notes_desc"
+            android:textSize="14sp"
+            android:textColor="#78909C"
+            android:gravity="center"
+            android:layout_marginTop="6dp" />
+    </LinearLayout>
+
+    <!-- Floating Action Button for New Note -->
+    <ImageButton
+        android:id="@+id/fab_add"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_fab"
+        android:src="@drawable/ic_add"
+        android:elevation="6dp"
+        android:contentDescription="@string/new_note" />
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">פתקים ותזכורות</string>
+    <string name="title_edit_note">עריכת פתק</string>
+    <string name="new_note">פתק חדש</string>
+    <string name="search_placeholder">חיפוש פתקים והערות…</string>
+    <string name="empty_notes_title">אין עדיין פתקים</string>
+    <string name="empty_notes_desc">לחצו על כפתור הפלוס כדי ליצור פתק או תזכורת ראשונה</string>
+    <string name="category_all">הכל</string>
+    <string name="category_general">כללי</string>
+    <string name="category_work">עבודה</string>
+    <string name="category_personal">אישי</string>
+    <string name="category_shopping">קניות</string>
+    <string name="category_ideas">רעיונות</string>
+    <string name="note_title_hint">כותרת הפתק…</string>
+    <string name="note_content_hint">הקלידו כאן את תוכן הפתק…</string>
+    <string name="checklist_hint">הוספת פריט לרשימה…</string>
+    <string name="btn_add_item">הוסף</string>
+    <string name="mode_text">טקסט חופשי</string>
+    <string name="mode_checklist">רשימת משימות</string>
+    <string name="pin_note">הצמד לראש הרשימה</string>
+    <string name="unpin_note">בטל הצמדה</string>
+    <string name="set_reminder">הגדר תזכורת</string>
+    <string name="reminder_set_for">תזכורת נקבעה ל:</string>
+    <string name="cancel_reminder">בטל תזכורת</string>
+    <string name="save_note">שמור פתק</string>
+    <string name="delete_note">מחק פתק</string>
+    <string name="confirm_delete">האם למחוק פתק זה לצמיתות?</string>
+    <string name="cancel">ביטול</string>
+    <string name="delete">מחק</string>
+    <string name="note_saved">הפתק נשמר בהצלחה</string>
+    <string name="reminder_channel_name">תזכורות לפתקים</string>
+    <string name="reminder_channel_desc">התראות עבור מועדי תזכורת שנקבעו לפתקים</string>
+    <string name="reminder_notification_title">תזכורת: %s</string>
+    <string name="choose_color">בחר צבע לפתק:</string>
+    <string name="category_label">קטגוריה:</string>
+    <string name="hebrew_date_label">תאריך עברי להיום: %s</string>
+</resources>
